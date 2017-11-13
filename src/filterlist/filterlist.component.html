@@ -1,3 +1,5 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>Filtrar asignaturas</h1>
 <div class="container">
   <div class="col-md-offset-4 col-md-4">
 
@@ -17,13 +19,32 @@
         <input type="text"  [(ngModel)]="subject.quadrimestre" class="form-control" name="quadrimestre" id="quadrimestre" required>
       </div>
 
-      <div class="form-group">
-        <label for="students">Alumnos</label>
-        <input type="array"  [(ngModel)]="subject.students" class="form-control" name="students" id="students">
-      </div>
-
-      <button type="submit" class="btn btn-success" >Añadir asignatura</button>
+      <button type="submit" class="btn btn-success" >Filtrar</button>
     </form>
+
+    <div class="container-fluid col-md-12">
+
+      <div class="col col-md-6">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Asignatura</th>
+            <th>Titulación</th>
+            <th>Quadrimestre</th>
+            <th>Alumnos</th>
+          </tr>
+          </thead>
+          <tbody ng-repeat="i in students">
+          <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.studies}}</td>
+            <td>{{i.quadrimestre}}</td>
+            <td>{{i.students}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
     <br>
   </div>

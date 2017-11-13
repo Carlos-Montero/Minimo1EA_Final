@@ -1,4 +1,3 @@
-/*
 import { Component } from '@angular/core';
 import {Http, Response} from '@angular/http';
 
@@ -14,6 +13,10 @@ export class ListComponent {
       this.subjects = data;
     });
   }
+  onSubmit() {
+    console.log("doing get");
+    this.http.get('http://localhost:3000/api/subjects/').subscribe();
 
+  }
 }
 
