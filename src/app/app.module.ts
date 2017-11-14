@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ListComponent } from './list.component';
+import { ListSubject } from './listsubject.component';
+import { ListStudent } from './liststudent.component';
 import { SubjectComponent } from './subject.component';
 import { AppComponent } from './app.component';
-import { FilterListComponent } from './filterlist.component';
 import {HttpModule} from "@angular/http";
 import {Routes, RouterModule} from "@angular/router";
 
@@ -15,17 +15,17 @@ import 'rxjs/add/operator/map';
 const appRoutes: Routes = [
   {path: 'app', component: AppComponent},
   {path: 'subject', component: SubjectComponent},
-  {path: 'list', component: ListComponent},
-  {path: 'filterlist', component: FilterListComponent}
+  {path: 'listsubject', component: ListSubject},
+  {path: 'liststudent', component: ListStudent}
 ]
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
+    ListSubject,
     SubjectComponent,
-    FilterListComponent
+    ListStudent
   ],
   imports: [
     BrowserModule,

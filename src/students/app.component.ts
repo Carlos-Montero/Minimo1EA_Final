@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import {Http, Response} from '@angular/http';
-
+/*componente para añadir alumnos*/
 @Component({
-  selector: 'app-root',
+  selector: 'app-student',
   templateUrl: './students/app.component.html',
   styleUrls: ['./students/app.component.css']
 })
@@ -10,8 +10,8 @@ export class AppComponent {
   title = 'app';
   student = {};
   students = [];
-  subject = {};
-  subjects = [];
+  //subject = {};
+  //subjects = [];
 
   constructor(private http: Http) {
     this.student = {

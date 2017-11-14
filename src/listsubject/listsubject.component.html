@@ -1,4 +1,3 @@
-<body ng-controller="mainController">
 <div class="container-fluid">
   <!--Cabecera-->
   <div class="jumbotron text-center">
@@ -18,9 +17,9 @@
         <th>Alumnos</th>
       </tr>
       </thead>
-      <tbody ng-repeat="i in students">
+      <tbody ng-repeat="i in subjects">
       <tr>
-        <td>{{i.subject}}</td>
+        <td>{{i.name}}</td>
         <td>{{i.studies}}</td>
         <td>{{i.quadrimestre}}</td>
         <td>{{i.students}}</td>
@@ -29,6 +28,4 @@
     </table>
   </div>
 </div>
-
-
 </body>

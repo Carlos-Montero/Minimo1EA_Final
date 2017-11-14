@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import {Http, Response} from '@angular/http';
-
+/*componente para añadir asignaturas*/
 @Component({
-  selector: 'app-root',
+  selector: 'app-subject',
   templateUrl: './subject.component.html',
   styleUrls: ['./subject.component.css']
 })

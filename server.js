@@ -54,6 +54,18 @@ app.get('/api/subjects', function(req, res) {
     });
 });
 
+
+//listar todos los alumnos
+app.get('/api/students', function(req, res) {
+  Student.find(req.query,function(err, subjects) {
+    if(err) {
+      res.send(err);
+    }
+    res.json(subjects);
+
+  });
+});
+
 //buscar asignatura por nombre
 app.get('/api/subjects/:name', function(req, res,next) {
     var name = new mongoose.Types.ObjectId(req.params.name);
@@ -63,6 +75,18 @@ app.get('/api/subjects/:name', function(req, res,next) {
         }
         res.send(subject);
     });
+
+});
+
+//buscar alumno por nombre
+app.get('/api/students/:name', function(req, res,next) {
+  var name = new mongoose.Types.ObjectId(req.params.name);
+  Subject.findStudentByName({name: name}).populate("student").exec(function(err, student) {
+    if(err) {
+      res.send(err);
+    }
+    res.send(subject);
+  });
 
 });
 
@@ -91,13 +115,6 @@ app.get('/api/subjects/:quadrimestre', function(req, res,next) {
   });
 
 });
-
-//Ordenacion por nombre
-
-
-
-//Ver detalle de una asignatura
-
 
 
 
@@ -130,8 +147,6 @@ app.post('/api/subjects', function (req, res, next) {
     console.log("Subject creada");
   })
 });
-
-
 
 
 //matricular alumno a una asignatura
