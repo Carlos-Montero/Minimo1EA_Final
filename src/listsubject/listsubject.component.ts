@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './listsubject.component.html',
   styleUrls: ['./listsubject.component.css']
 })
-export class ListSubject {
+export class ListSubjectComponent {
 
   private Url= '/api/subjects';
   private subjects:any=[{}];

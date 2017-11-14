@@ -11,7 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './liststudent.component.html',
   styleUrls: ['./liststudent.component.css']
 })
-export class ListStudent {
+export class ListStudentComponent {
 
   private Url= '/api/students';
   private students:any=[{}];
